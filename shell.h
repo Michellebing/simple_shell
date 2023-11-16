@@ -89,7 +89,7 @@ typedef struct passinfo
 	int env_changed;
 	int status;
 
-	char *cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
+	char *cmd_buf; / pointer to cmd ; chain buffer, for memory mangement */
 	int cmd_buf_type; /* CMD_type ||, &&, ; */
 	int readfd;
 	int histcount;
@@ -145,7 +145,7 @@ int _putchar(char);
 
 /* toem_exits.c */
 char *_strncpy(char *, char *, int);
-char *_strncat(char *dest, const char *src, int n);
+char *_strncat(char *, char *, int);
 char *_strchr(char *, char);
 
 /* toem_tokenizer.c */
@@ -226,8 +226,8 @@ list_t *node_starts_with(list_t *, char *, char);
 ssize_t get_node_index(list_t *, list_t *);
 
 /* toem_vars.c */
-int is_chain(info_t *info, char*, size_t *length);
-void check_chain(info_t *info, char *str, size_t *result_length, size_t  min_length, size_t max_length);
+int is_chain(info_t *, char *, size_t *);
+void check_chain(info_t *, char *, size_t *, size_t, size_t);
 int replace_alias(info_t *);
 int replace_vars(info_t *);
 int replace_string(char **, char *);
